@@ -27,7 +27,7 @@ The dataset used is a flat file named Retail-supply-chain-analysis (Retail-suppl
 7. What is the total number of products by sub categories?
 
 ## Data Analysis
-### 1. What were the average delivery days for different product subcategories?
+#### 1. What were the average delivery days for different product subcategories?
 ```sql
 -- What is the average delivery days for different product categories? To get this, we need to make use of the datediff function
 SELECT
@@ -48,7 +48,7 @@ GROUP BY Sub_Category; /** Therefore, the average delivery days for the differen
 Chairs = 32, Bookcases = 32, Furnishings = 34, Tables = 36**/
 ```
 ###
-### 2. What was the average delivery days for each Segment?
+#### 2. What was the average delivery days for each Segment?
 ```sql
 SELECT
 	Segment,
@@ -60,7 +60,7 @@ ORDER BY Avg_Delivery_Days DESC;
 /** Therefore, the average delivery days for the different Sgements are:
 Corporate = 35, Home Office = 32, Consumer = 34 **/
 ```
-### 3. What are the top 5 fastest delivered products and the top 5 slowest delivered products?
+#### 3. What are the top 5 fastest delivered products and the top 5 slowest delivered products?
 ```sql
 SELECT
 TOP 5
@@ -71,7 +71,7 @@ LEFT JOIN DimProduct AS DP
 ON Ordf.ProductKey = DP.ProductKey
 ORDER BY Avg_Delivery_Days;
 ```
-#### The bottom 5 delivered products
+##### The bottom 5 delivered products
 ```sql
 SELECT
 TOP 5
@@ -83,7 +83,7 @@ ON Ordf.ProductKey = DP.ProductKey
 ORDER BY Avg_Delivery_Days DESC;
 ```
 
-### 4. Which product category generates the most profit?
+#### 4. Which product category generates the most profit?
 ```sql
 SELECT
 	DP.Sub_Category,
@@ -97,7 +97,7 @@ WHERE Profit > 0
 GROUP BY DP.Sub_Category
 ORDER BY Most_SC_Profit DESC;
 ```
-### 5. Which product sub category generates the most profit?
+#### 5. Which product sub category generates the most profit?
 ```sql
 SELECT
 	Segment,
@@ -108,7 +108,7 @@ WHERE Profit > 0
 GROUP BY Segment
 ORDER BY Most_SGM_Profit DESC; -- the Consumer segment generated the most profit
 ```
-### 6. Which top 5 Customers generate the most profit?
+#### 6. Which top 5 Customers generate the most profit?
 ```sql
 SELECT
 TOP 5 
@@ -122,7 +122,7 @@ WHERE Profit > 0
 GROUP BY DC.Customer_Name
 ORDER BY TP DESC; -- The top 5 customers are Laura Armstrong, Joe Elijah, Seth Vernon, Quincy Jones, Maria Etezadi
 ```
-### 7. Total number of products by Sub Category
+#### 7. Total number of products by Sub Category
 ```sql
 SELECT
 	Sub_Category,
@@ -135,6 +135,17 @@ Furnishings, Chairs, Bookcases, Tables */
 ```
 ## Findings/Results
 ##### Average Delivery Days by Product Sub-Category
-- Chairs & Bookcases take an average of 32 days for delivery.
-- Furnishings take slightly longer, averaging 34 days.
-###### The longer delivery times for Tables and Furnishings may indicate supply chain inefficiencies or higher demand. Optimizing logistics or inventory management in these categories could improve delivery speed and customer satisfaction.
+The longer delivery times for Tables and Furnishings may indicate supply chain inefficiencies or higher demand. Optimizing logistics or inventory management in these categories could improve delivery speed and customer satisfaction.
+##### Average Delivery Days by Customer Segment
+Corporate orders are experiencing longer delivery times due to bulk purchases and or special handling requirements. Optimizing logistics for corporate clients could improve efficiency, while maintaining fast delivery for Home Office customers helps retain their satisfaction.
+##### Fastest and Slowest Delivered Products
+- Top 5 Fastest-Delivered Products: These items have significantly shorter delivery times, ensuring quick customer fulfillment.
+- Bottom 5 Slowest-Delivered Products: These take the longest to ship, potentially causing delays and dissatisfaction.
+###### Analyzing why certain products experience delays—whether due to supply chain issues, warehouse inefficiencies, or high demand—can help improve delivery speed. Addressing these bottlenecks will lead to better customer satisfaction and operational efficiency.
+
+##### Most Profitable Product Sub-Category
+Invest more in Chairs, Furnishings, Bookcases, Tables, because these high-profit sub-categories could boost overall profitability.
+##### Most Profitable Customer Segment
+The Consumer segment is the most profitable, indicating a strong customer base. This makes it a key focus for marketing efforts and retention strategies to drive continued growth.
+###### Most Profitable Customer Segment
+The most profitable customers include Laura Armstrong, Joe Elijah, Seth Vernon, Quincy Jones, and Maria Etezadi. They are valuable to the business, and offering them personalized deals or loyalty programs could encourage repeat purchases.
