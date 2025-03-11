@@ -147,5 +147,12 @@ Corporate orders are experiencing longer delivery times due to bulk purchases an
 Invest more in Chairs, Furnishings, Bookcases, Tables, because these high-profit sub-categories could boost overall profitability.
 ##### Most Profitable Customer Segment
 The Consumer segment is the most profitable, indicating a strong customer base. This makes it a key focus for marketing efforts and retention strategies to drive continued growth.
-###### Most Profitable Customer Segment
+##### Most Profitable Customer Segment
 The most profitable customers include Laura Armstrong, Joe Elijah, Seth Vernon, Quincy Jones, and Maria Etezadi. They are valuable to the business, and offering them personalized deals or loyalty programs could encourage repeat purchases.
+##### Total Number of Products by Sub-Category
+The highest number of products are in Furnishings, Chairs, Bookcases, and Tables. A diverse product range in these categories indicates strong demand, but it may also suggest the need for inventory optimization.
+
+## Key Recommendations
+- Delivery Time Optimization: Focus on reducing delays in the slowest sub-categories and corporate segment.
+- Profit Maximization: Invest more in high-profit sub-categories and strengthen relationships with top customers.
+- Customer Focus: Since the Consumer segment drives the most profit, targeted marketing efforts here could yield significant growth.
