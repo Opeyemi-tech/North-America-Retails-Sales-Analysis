@@ -6,7 +6,7 @@ By the end of the analysis, I'll identify areas for improvement and suggest stra
 
 
 ## Data Source:
-The dataset used is a flat file named Retail-supply-chain-analysis (Retail-supply-chain-analysis.csv) provided by North America Retail gotten from @mydataclique (A data community
+The dataset used is a flat file named Retail-supply-chain-analysis (Retail-supply-chain-analysis.csv) provided by North America Retail gotten from @mydataclique (A data community)
 
 ## Tool Used
 - SQL
